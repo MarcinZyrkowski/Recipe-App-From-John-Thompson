@@ -7,6 +7,8 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
+import java.util.Objects;
+
 @Component
 public class CategoryToCategoryCommand implements Converter<Category, CategoryCommand> {
 
@@ -14,7 +16,7 @@ public class CategoryToCategoryCommand implements Converter<Category, CategoryCo
     @Nullable
     @Override
     public CategoryCommand convert(Category source) {
-        if (source == null) {
+        if (Objects.isNull(source)) {
             return null;
         }
 
