@@ -7,10 +7,8 @@ import com.example.RecipeApp.commands.RecipeCommand;
 import com.example.RecipeApp.converters.*;
 import com.example.RecipeApp.domain.Difficulty;
 import com.example.RecipeApp.domain.Recipe;
-import com.sun.xml.bind.v2.TODO;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.Assert.*;
 
@@ -45,9 +43,8 @@ public class RecipeCommandToRecipeTest {
         assertNull(converter.convert(null));
     }
 
-    // TODO
     @Test
-    public void testEmptyObject() throws Exception {
+    public void testEmptyObject() {
         assertNotNull(converter.convert(new RecipeCommand()));
     }
 
