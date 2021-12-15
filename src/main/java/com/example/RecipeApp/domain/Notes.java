@@ -1,13 +1,15 @@
 package com.example.RecipeApp.domain;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 
-@Entity
 @Getter
 @Setter
+@EqualsAndHashCode(exclude = {"recipe"})
+@Entity
 public class Notes {
 
     @Id
@@ -16,6 +18,7 @@ public class Notes {
 
     @OneToOne
     private Recipe recipe;
+
     @Lob
     private String recipeNotes;
 
